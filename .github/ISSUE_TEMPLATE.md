@@ -1,5 +1,5 @@
 ---
-title: env.issue_name
+title: {{ env.issue_name }}
 assignees:
 labels: bug, enhancement
 ---
