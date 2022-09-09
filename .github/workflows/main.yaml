@@ -24,7 +24,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ISSUE_NAME: ${{ fromJson(steps.hello.outputs.issue).title }} [automated]
-        ISSUE_LABELS: ${{ fromJson(steps.hello.outputs.issue).labels }} nst
+        ISSUE_LABELS: ${{ fromJson(steps.hello.outputs.issue).labels.join() }} nst
       with:
         assignees: bmadjic
         update_existing: true
