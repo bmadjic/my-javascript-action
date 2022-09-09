@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+        hello_world_job:
+                runs-on: ubuntu-latest
+                name: A job to say hello
+                steps:
+                - name: hello world action step
+                  id: hello
+                  uses: bmadjic/my-javascript-action@v1
+                  with:
+                        who-to-greet: 'Ben'
+                - name:
+                  run: echo "The time was ${{ steps.hello.outputs.time }}"
