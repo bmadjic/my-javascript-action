@@ -15,15 +15,15 @@ jobs:
     - uses: actions/checkout@v2
     - name: hello world action step
       id: hello
-      uses: bmadjic/my-javascript-action@v28
+      uses: bmadjic/my-javascript-action@v29
       with:
         who-to-greet: 'Ben'
     - name:
-      run: echo "The time was ${{ steps.hello.outputs.issue.issue_name }}"
+      run: echo "The time was ${{ steps.hello.outputs.issue }}"
     - uses: JasonEtco/create-an-issue@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ISSUE_NAME: ${{ steps.hello.outputs.issue.issue_name }} [automated]
+        ISSUE_NAME: ${{ steps.hello.outputs.issue }} [automated]
       with:
         assignees: bmadjic
         update_existing: true
