@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: hello world action step
       id: hello
-      uses: bmadjic/my-javascript-action@v22
+      uses: bmadjic/my-javascript-action@v23
       with:
         who-to-greet: 'Ben'
     - name:
@@ -24,8 +24,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        assignees: JasonEtco, octocat
-        milestone: 1
+        assignees: bmadjic
         update_existing: true
         search_existing: all
       id: created-issue

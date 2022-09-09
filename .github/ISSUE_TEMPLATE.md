@@ -1,6 +1,6 @@
 ---
 title: Someone just pushed
-assignees: bmadjic
+assignees:
 labels: bug, enhancement
 ---
 Owner {{ payload.issue.owner }}.
