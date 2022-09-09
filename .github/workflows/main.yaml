@@ -3,6 +3,10 @@ on:
     types:
       - opened
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
@@ -17,5 +21,13 @@ jobs:
     - name:
       run: echo "The time was ${{ steps.hello.outputs.issue_name }} ${{ steps.hello.outputs.payload }}"
     - uses: JasonEtco/create-an-issue@v2
+      id: created-issue
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        assignees: JasonEtco, octocat
+        milestone: 1
+        update_existing: true
+        search_existing: all
+      - run: 'echo Created issue number ${{ steps.created-issue.outputs.number }}'
+      - run: 'echo Created ${{ steps.created-issue.outputs.url }}'
