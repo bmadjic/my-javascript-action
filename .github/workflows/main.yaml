@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: hello world action step
       id: hello
-      uses: bmadjic/my-javascript-action@v38
+      uses: bmadjic/my-javascript-action@v39
       with:
         who-to-greet: 'Ben'
     - name:
@@ -24,7 +24,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ISSUE_NAME: ${{ fromJson(steps.hello.outputs.issue).title }} [automated]
-        ISSUE_LABELS: ${{ fromJson(steps.hello.outputs.issue).labels.join() }} nst
+        ISSUE_LABELS: ${{ JSON.stringify(fromJson(steps.hello.outputs.issue).labels) }} nst
       with:
         assignees: bmadjic
         update_existing: true
