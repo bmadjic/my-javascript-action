@@ -3,4 +3,8 @@ title: Someone just pushed
 assignees: bmadjic
 labels: bug, enhancement
 ---
-Someone just pushed, oh no! Here's who did it: {{ payload.issue }}.
+Owner {{ payload.issue.owner }}.
+repo {{ payload.issue.repo }}.
+issue number {{ payload.issue.issue_number }}.
+
+url = {{ payload.issue.repo }}/{{ payload.issue.issue_number }}
