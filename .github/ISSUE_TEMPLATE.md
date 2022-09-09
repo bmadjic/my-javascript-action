@@ -1,9 +1,9 @@
 ---
-title: automated stuff
+title: "The original {{ env.ISSUE_NAME }}"
 assignees:
 labels: bug, enhancement
 ---
-{{ env.ISSUE_NAME }}
+The original {{ env.ISSUE_NAME }}
 Owner {{ payload.issue.owner }}.
 repo {{ payload.issue.repo }}.
 issue number {{ payload.issue.issue_number }}.
