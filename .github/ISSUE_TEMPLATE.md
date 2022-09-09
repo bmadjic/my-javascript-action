@@ -1,7 +1,7 @@
 ---
 title: "The original {{ env.ISSUE_NAME }}"
 assignees:
-labels: bug, enhancement
+labels: {{ env.ISSUE_LABELS }}
 ---
 The original {{ env.ISSUE_NAME }}
 Owner {{ payload.issue.owner }}.
