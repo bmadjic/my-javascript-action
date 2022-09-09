@@ -1,8 +1,10 @@
 ---
 title: "The original {{ env.ISSUE_NAME }}"
 assignees:
-labels: {{ env.ISSUE_LABELS }}
+labels: 
 ---
+
+labels: {{ env.ISSUE_LABELS }}
 The original {{ env.ISSUE_NAME }}
 Owner {{ payload.issue.owner }}.
 repo {{ payload.issue.repo }}.
