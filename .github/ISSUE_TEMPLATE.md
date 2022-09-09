@@ -1,5 +1,5 @@
 ---
-title: Someone just pushed
+title: env.issue_name
 assignees:
 labels: bug, enhancement
 ---
