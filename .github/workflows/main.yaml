@@ -10,8 +10,8 @@ jobs:
     steps:
     - name: hello world action step
       id: hello
-      uses: bmadjic/my-javascript-action@v5
+      uses: bmadjic/my-javascript-action@v4
       with:
         who-to-greet: 'Ben'
     - name:
-      run: echo "The time was ${{ steps.hello.outputs.issue_name }} ${{ steps.hello.outputs.payload}}"
+      run: echo "The time was ${{ steps.hello.outputs.issue_name }} ${{ steps.hello.outputs.payload }}"
