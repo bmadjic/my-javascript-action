@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: hello world action step
       id: hello
-      uses: bmadjic/my-javascript-action@v11
+      uses: bmadjic/my-javascript-action@v12
       with:
         who-to-greet: 'Ben'
     - name:
