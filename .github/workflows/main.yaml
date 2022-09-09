@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: hello world action step
       id: hello
-      uses: bmadjic/my-javascript-action@v21
+      uses: bmadjic/my-javascript-action@v22
       with:
         who-to-greet: 'Ben'
     - name:
@@ -29,5 +29,5 @@ jobs:
         update_existing: true
         search_existing: all
       id: created-issue
-      - run: 'echo Created issue number ${{ steps.created-issue.outputs.number }}'
-      - run: 'echo Created ${{ steps.created-issue.outputs.url }}'
+    - run: 'echo Created issue number ${{ steps.created-issue.outputs.number }}'
+    - run: 'echo Created ${{ steps.created-issue.outputs.url }}'
