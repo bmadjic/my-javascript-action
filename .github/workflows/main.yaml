@@ -8,10 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+    - uses: actions/checkout@v2
     - name: hello world action step
       id: hello
-      uses: bmadjic/my-javascript-action@v13
+      uses: bmadjic/my-javascript-action@v14
       with:
         who-to-greet: 'Ben'
     - name:
       run: echo "The time was ${{ steps.hello.outputs.issue_name }} ${{ steps.hello.outputs.payload }}"
+    - name: autre
+      id: autre
+      uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with: 
+          title: steps.hello.outputs.issue_name
